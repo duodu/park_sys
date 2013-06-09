@@ -1,0 +1,18 @@
+<h1>Your ticket ID is <%= @ticket.id%></h1>
+<p>
+  <b>Plate Number:</b>
+  <%= @ticket.plate_number %>
+</p>
+
+<p>
+  <b>Stall:</b>
+  <%= @ticket.stall.location %>
+</p>
+
+<p>
+  <b>Time:</b>
+  <%= @ticket.created_at %>
+</p>
+<br />
+<%= link_to "back", :action => "to_park" %>
+<%= link_to "out", :action => "out", :id=>@ticket.id %>

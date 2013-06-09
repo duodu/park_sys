@@ -41,6 +41,7 @@ class StallsController < ApplicationController
   # POST /stalls.json
   def create
     @stall = Stall.new(params[:stall])
+    @stall.is_idle = 1 #默认为1，空闲
 
     respond_to do |format|
       if @stall.save

@@ -1,6 +1,11 @@
 ParkSys::Application.routes.draw do
   resources :stalls
-
+  match "park" => "park_histories#park"
+  match "find/:id" => "park_histories#find_ticket"
+  match "park/:id" => "park_histories#show_ticket"
+  
+  match "park/:id/out" => "park_histories#out"
+  root :to => "park_histories#to_park"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

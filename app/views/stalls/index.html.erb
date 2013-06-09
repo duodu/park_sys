@@ -4,7 +4,7 @@
   <tr>
     <th>Location</th>
     <th>Is idle</th>
-    <th>Park his</th>
+    <th></th>
     <th></th>
     <th></th>
   </tr>
@@ -12,7 +12,11 @@
 <% @stalls.each do |stall| %>
   <tr>
     <td><%= stall.location %></td>
-    <td><%= stall.is_idle %></td>
+    <% if stall.is_idle == 1 %>
+    	<td>idle</td>
+	<% elsif stall.is_idle == 0 %>
+		<td>not idle</td>
+	<% end %>
     <td><%= link_to 'Show', stall %></td>
     <td><%= link_to 'Edit', edit_stall_path(stall) %></td>
     <td><%= link_to 'Destroy', stall, method: :delete, data: { confirm: 'Are you sure?' } %></td>
