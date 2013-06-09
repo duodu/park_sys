@@ -1,0 +1,16 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Location:</b>
+  <%= @stall.location %>
+</p>
+
+<p>
+  <b>Is idle:</b>
+  <%= @stall.is_idle %>
+</p>
+
+
+
+<%= link_to 'Edit', edit_stall_path(@stall) %> |
+<%= link_to 'Back', stalls_path %>

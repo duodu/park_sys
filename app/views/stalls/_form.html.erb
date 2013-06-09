@@ -1,0 +1,25 @@
+<%= form_for(@stall) do |f| %>
+  <% if @stall.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@stall.errors.count, "error") %> prohibited this stall from being saved:</h2>
+
+      <ul>
+      <% @stall.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :location %><br />
+    <%= f.text_field :location %>
+  </div>
+  <div class="field">
+    <%= f.label :is_idle %><br />
+    <%= f.number_field :is_idle %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  location: MyString
+  is_idle: 1
+  park_his_id: 1
+
+two:
+  location: MyString
+  is_idle: 1
+  park_his_id: 1

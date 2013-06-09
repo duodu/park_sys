@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  plate_number: MyString
+  stall_id: 1
+  is_out: 1
+
+two:
+  plate_number: MyString
+  stall_id: 1
+  is_out: 1
