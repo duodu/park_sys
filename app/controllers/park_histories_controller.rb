@@ -24,6 +24,9 @@ class ParkHistoriesController < ApplicationController
   end
   def show_ticket
     @ticket = ParkHistory.find(params[:id])
+    if @ticket.is_out == 1
+      redirect_to :action => "no_ticket"
+    end 
   end
   def out
     @park = ParkHistory.find(params[:id])
@@ -36,5 +39,8 @@ class ParkHistoriesController < ApplicationController
   end
   def find_ticket
     redirect_to :action => "show_ticket", :id => params[:id]
+  end
+  def no_ticket
+    
   end
 end

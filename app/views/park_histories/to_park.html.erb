@@ -10,8 +10,11 @@
 	<%= text_field_tag :plate_number %>
 	<%= submit_tag "park" %>
 <% end %>
+<br />
 <%= form_tag :action => "find_ticket" do %>
-	<%= lable_tag "ticket ID" %>
+	<%= label_tag "ticket ID" %>
 	<%= text_field_tag :id %>
 	<%= submit_tag "query" %>
 <% end %>
+<br />
+<%= link_to "stalls", :controller => "stalls", :action => "stall_index"%>

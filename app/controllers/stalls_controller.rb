@@ -81,4 +81,7 @@ class StallsController < ApplicationController
       format.json { head :no_content }
     end
   end
+  def stall_index
+    @stalls = Stall.all
+  end
 end

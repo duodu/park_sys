@@ -1,0 +1,23 @@
+<h1>Listing stalls</h1>
+
+<table>
+  <tr>
+    <th>Location</th>
+    <th>Is idle</th>
+  </tr>
+
+<% @stalls.each do |stall| %>
+  <tr>
+    <td><%= stall.location %></td>
+    <% if stall.is_idle == 1 %>
+    	<td>idle</td>
+	<% elsif stall.is_idle == 0 %>
+		<td>not idle</td>
+	<% end %>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'back', :controller => "park_histories", :action => "to_park" %>
