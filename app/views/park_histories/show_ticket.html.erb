@@ -11,7 +11,20 @@
 
 <p>
   <b>Time:</b>
-  <%= @ticket.created_at %>
+  <%= @create_time %>
+</p>
+<p>
+  <b>Now:</b>
+  <%= @now_time %>
+</p>
+<p>
+  <b>You have parked for:</b>
+  <%= @distance_time %>
+  <% if @distance_time > 1 %>
+  <b>hours</b>
+  <% else %>
+  <b>hour</b>
+  <% end %>
 </p>
 <br />
 <%= link_to "back", :action => "to_park" %>

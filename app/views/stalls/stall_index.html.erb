@@ -4,6 +4,7 @@
   <tr>
     <th>Location</th>
     <th>Is idle</th>
+    <th>Plate Number</th>
   </tr>
 
 <% @stalls.each do |stall| %>
@@ -13,6 +14,7 @@
     	<td>idle</td>
 	<% elsif stall.is_idle == 0 %>
 		<td>not idle</td>
+		<td><%= stall.park_histories.where("is_out=?",0).last.plate_number %></td>
 	<% end %>
   </tr>
 <% end %>
